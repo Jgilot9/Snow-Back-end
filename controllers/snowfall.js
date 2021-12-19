@@ -14,7 +14,7 @@ SnowfallRouter.post("/", (req, res, next) => {
     .catch(next);
 });
 SnowfallRouter.put("/", (req, res, next) => {
-  Snowfall.findOneAndUpdate({ _id: req.params._id }, req.body, { new: ture })
+  Snowfall.findOneAndUpdate({ _id: req.params._id }, req.body, { new: true })
     .then((snow) => res.json(snow))
     .catch(next);
 });

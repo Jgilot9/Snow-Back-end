@@ -1,10 +1,14 @@
-const mongoose = require('../db/connection')
+const mongoose = require("../db/connection");
 
 const SnowfallSchema = new mongoose.Schema({
-    address: String
+  id: Object,
 
-})
+  address: { type: String, unique: true },
 
-const Snowfall = mongoose.model('Snowfall' , SnowfallSchema)
+  status: Boolean,
+  notes: String,
+});
 
-module.exports - Snowfall
+const Snowfall = mongoose.model("Snowfall", SnowfallSchema);
+
+module.exports = Snowfall;

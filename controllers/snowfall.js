@@ -9,16 +9,16 @@ SnowfallRouter.get("/", (req, res, next) => {
     .catch(next);
 });
 SnowfallRouter.post("/", (req, res, next) => {
-  Snowfall.create({})
+  Snowfall.create(req.body)
     .then((snow) => res.json(snow))
     .catch(next);
 });
-SnowfallRouter.put("/", (req, res, next) => {
-  Snowfall.findOneAndUpdate({ _id: req.params._id }, req.body, { new: true })
+SnowfallRouter.put("/:id", (req, res, next) => {
+  Snowfall.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
     .then((snow) => res.json(snow))
     .catch(next);
 });
-SnowfallRouter.get("/", (req, res, next) => {
+SnowfallRouter.get("/:id", (req, res, next) => {
   Snowfall.findById(req.params.id)
     .then((snow) => res.json(snow))
     .catch(next);

@@ -5,6 +5,7 @@ const SnowfallSchema = new mongoose.Schema({
 
   address: { type: String, unique: true },
   coordinates: { x: Number, y: Number },
+
   city: String,
   State: String,
   zip: String,
@@ -14,6 +15,7 @@ const SnowfallSchema = new mongoose.Schema({
     // default: Date.now,
   },
   status: { type: Boolean, default: false },
+
   notes: { type: String, default: '' },
 });
 

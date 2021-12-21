@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const mongoURI =
   process.env.NODE_ENV === 'production'
     ? process.env.DB_URL
-    : 'mongodb://localhost/snow-back-end';
+    : 'mongodb://127.0.0.1:27017/snow-back-end';
 
 mongoose
   .connect(mongoURI)

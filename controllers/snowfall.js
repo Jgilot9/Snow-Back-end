@@ -3,7 +3,7 @@ const SnowfallRouter = express.Router();
 const Snowfall = require('../models/snowfall');
 
 SnowfallRouter.get('/', (req, res, next) => {
-  Snowfall.find({})
+  Snowfall.find()
     .then((snow) => res.json(snow))
     .catch(next);
 });

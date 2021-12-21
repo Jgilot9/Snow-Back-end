@@ -26,4 +26,12 @@ SnowfallRouter.get('/:id', (req, res, next) => {
     .catch(next);
 });
 
+SnowfallRouter.delete('/:id', (req, res, next) => {
+  Snowfall.deleteOne({ _id: req.params.id })
+    .then((snow) => {
+      res.json(snow);
+    })
+    .catch(next);
+});
+
 module.exports = SnowfallRouter;

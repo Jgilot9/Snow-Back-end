@@ -1,7 +1,6 @@
 {
-  "name": "Snow-Back-end",
+  "name": "snow-back-end",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^6.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jgilot9/Snow-Back-end.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jgilot9/Snow-Back-end/issues"
+  },
+  "homepage": "https://github.com/Jgilot9/Snow-Back-end#readme",
+  "description": ""
 }

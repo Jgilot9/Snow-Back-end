@@ -6,7 +6,7 @@ const SnowfallSchema = new mongoose.Schema({
   addressComponents: { zip: String },
   createdAt: {
     type: Date,
-    expires: 40, // 86400
+    expires: 86400,
     default: Date.now,
   },
   status: { type: Boolean, default: false },

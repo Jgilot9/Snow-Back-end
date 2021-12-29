@@ -1,8 +1,11 @@
 const mongoose = require('../db/connection');
 
 const SnowfallSchema = new mongoose.Schema({
-  matchedAddress: { type: String, unique: true },
-  coordinates: { x: Number, y: Number },
+  matchedAddress: { type: String },
+  coordinates: {
+    x: { type: Number, unique: true },
+    y: { type: Number, unique: true },
+  },
   addressComponents: { zip: String },
   createdAt: {
     type: Date,
